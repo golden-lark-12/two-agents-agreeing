@@ -15,10 +15,13 @@ POEM = "\n".join(
     ]
 )
 
+OUTPUT_DIR = "/output"
+ENTRY_PATH = "/output/entry.txt"
+
 
 def main():
-    os.makedirs("/output", exist_ok=True)
-    with open("/output/entry.txt", "w", encoding="utf-8", newline="") as f:
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    with open(ENTRY_PATH, "w", encoding="utf-8", newline="") as f:
         f.write(POEM)
 
 
